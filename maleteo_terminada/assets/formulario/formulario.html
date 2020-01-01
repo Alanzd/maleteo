@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Catamaran:400,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="http://localhost:8000/css/assets/styles/styles.css">
+ 
+</head>
+<body>
+  <div class="wrapper">
+      <div class="container-fluid">
+        <header class="header">
+            <img src="img/logo.svg" alt="Maleteo">
+        </header>
+      </div>
+  </div>
+{{form_start(demoForm, {'action': path('demo_new') }) }}
+<p class="the form__title heading3">
+Solicita una demo
+</p>
+<div class="the-form__group">
+    {{form__label(demoForm.nombre)}}
+    {{form__widget(demoForm.nombre, {'attr':{'class':'the-form__input'}}) }}
+</div>
+<div class="the-form__group">
+    {{form__label(demoForm.email) }}
+    {{form__widget(demoForm.email, {'attr':{'class':'the-form__input'}}) }}
+</div>
+<div class="the-form__group">
+    {{form__label(demoForm.ciudad) }}
+    {{form__widget(demoForm.ciudad, {'attr':{'class':'the-form__input the-form__select'}}) }}
+</div>
+<div class="the-form__group the-form__group_checkbox">
+    {{form__widget(demoForm.politicaPrivacidad) }}
+    <label for="privacity">
+        Aceptas la <a href="#"> Política de privacidad</a>

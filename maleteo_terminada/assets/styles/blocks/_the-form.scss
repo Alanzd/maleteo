@@ -1,0 +1,53 @@
+.the-form {
+  border: 1px solid $gray1;
+  padding: 2em;
+  display:block;
+
+  &__title {
+    margin-bottom: 1em;
+  }
+
+  &__group {
+    margin-bottom: 1em;
+    label {
+      display: block;
+      margin-bottom: .2em;
+    }
+
+    &_checkbox {
+      label {
+        display: inline;
+      }
+    }
+  }
+
+  &__input {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    &[type='text'],
+    &[type='email']{
+      padding: .7em;
+    }
+  }
+
+  &__select {
+    height: 2.5em;
+  }
+}
+.mensaje__ok{    //de entrada la clase mensaje__ok esta oculta
+    display:none
+}
+
+.mensaje { 
+  & .mensaje__ok{   //cuando aparece la clase mensaje despues de darle a submit entonces se muestra (display:block)
+    display:block;
+    border: 1px solid $gray1;
+    padding: 2em;
+  }
+  
+    & .the-form{ //cuando aparece la clase mensaje despues de submit la clase mensaje.the-form desaparece
+      display:none
+    }
+}
+
